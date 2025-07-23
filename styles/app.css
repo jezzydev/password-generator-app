@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /* font */
+  --fontFamily: "JetBrains Mono", monospace;
+  --fontWeightBold: 700;
+  --fontPreset1: var(--fontWeightBold) 32px/42px var(--fontFamily);
+  --fontPreset2: var(--fontWeightBold) 24px/32px var(--fontFamily);
+  --fontPreset3: var(--fontWeightBold) 18px/24px var(--fontFamily);
+  --fontPreset4: var(--fontWeightBold) 16px/20px var(--fontFamily);
+
+  font-family: var(--fontFamily);
+  font-optical-sizing: auto;
+  font-style: normal;
+  letter-spacing: 0;
+
+  /* colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-grey-950: #08070b;
+  --color-grey-900: #14131b;
+  --color-grey-850: #18171f;
+  --color-grey-800: #24232c;
+  --color-grey-700: #54535b;
+  --color-grey-600: #817d92;
+  --color-grey-200: #e6e5ea;
+  --color-green-200: #a4ffaf;
+  --color-yellow-300: #f8cd65;
+  --color-orange-400: #fb7c58;
+  --color-red-500: #f64a4a;
+  --gradient-1: linear-gradient(#14131b 0%, #08070b 100%);
+}
+
+h1,
+ul,
+li,
+p,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button {
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-grey-950);
+  color: var(--color-white);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.PasswordGenContainer {
+  max-width: 540px;
+  width: 100%;
+  display: grid;
+  gap: 16px;
+}
+
+.PasswordGenHeader,
+.PasswordGenBody {
+  min-width: 343px;
+  width: 100%;
+}
+
+.PasswordGenHeader__title {
+  text-align: center;
+  font: var(--fontPreset4);
+  color: var(--color-grey-600);
+}
+
+.PasswordGenBody {
+  display: grid;
+  gap: 16px;
+}
+
+.PasswordGenBody__passwordDisplayContainer,
+.PasswordGenBody__settingsContainer {
+  background-color: var(--color-grey-800);
+  padding: 16px;
+}
+
+.PasswordGenBody__settingsContainer {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: 32px;
+}
