@@ -51,6 +51,7 @@ button {
   background: transparent;
   padding: 0;
   border: none;
+  cursor: pointer;
 }
 
 body {

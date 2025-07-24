@@ -38,7 +38,9 @@
   justify-content: center;
 }
 
-.OptionItem__label:hover .OptionItem__checkmarkContainer {
+.OptionItem__label:hover .OptionItem__checkmarkContainer,
+.OptionItem__label:focus-within .OptionItem__checkmarkContainer,
+.OptionItem__label:active .OptionItem__checkmarkContainer {
   border-color: var(--color-green-200);
 }
 

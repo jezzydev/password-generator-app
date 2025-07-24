@@ -1,0 +1,35 @@
+/* generate button */
+.Generate__button {
+  width: 100%;
+  padding: 16px 104px;
+  background-color: var(--color-green-200);
+  color: var(--color-grey-800);
+  font: var(--fontPreset4);
+  text-transform: uppercase;
+  border: 2px solid var(--color-green-200);
+  outline: none;
+}
+
+.Generate__buttonContent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.Generate__button:hover,
+.Generate__button:active,
+.Generate__button:focus {
+  background-color: transparent;
+  color: var(--color-green-200);
+}
+
+.Generate__iconWrapper svg {
+  fill: var(--color-grey-800);
+}
+
+.Generate__button:hover .Generate__iconWrapper svg,
+.Generate__button:active .Generate__iconWrapper svg,
+.Generate__button:focus .Generate__iconWrapper svg {
+  fill: var(--color-green-200);
+}

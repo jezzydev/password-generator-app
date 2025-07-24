@@ -27,15 +27,26 @@
   width: 100%;
   height: 8px;
   background-color: var(--color-grey-850);
+  outline: none;
 }
 
 .CharacterSettings__slider::-webkit-slider-thumb {
   appearance: none;
   border-radius: 999px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
   background-color: var(--color-grey-200);
   width: 28px;
   height: 28px;
   cursor: pointer;
+}
+
+.CharacterSettings__slider::-webkit-slider-thumb:hover,
+.CharacterSettings__slider:focus.CharacterSettings__slider::-webkit-slider-thumb,
+.CharacterSettings__slider:active.CharacterSettings__slider::-webkit-slider-thumb {
+  background-color: var(--color-grey-850);
+  border-color: var(--color-green-200);
 }
 
 .CharacterSettings__slider::before {

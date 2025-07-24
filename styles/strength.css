@@ -1,8 +1,115 @@
 .CharacterSettings__strengthContainer {
   display: grid;
+  grid-template-rows: repeat(2, auto);
   gap: 32px;
 }
 
 /* strength */
+.Strength__content {
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-grey-850);
+}
 
-/* generate button */
+.Strength__text {
+  font: var(--fontPreset4);
+  color: var(--color-grey-600);
+  text-transform: uppercase;
+}
+
+.Strength__valueContainer {
+  display: inline-flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.Strength__valueText {
+  font: var(--fontPreset2);
+  color: var(--color-grey-200);
+  text-transform: uppercase;
+}
+
+.Strength__barsContainer {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  --barBorderColor: var(--color-grey-200);
+  --barFillColor: transparent;
+}
+
+.Strength__bar {
+  border-width: 2px;
+  border-style: solid;
+  width: 10px;
+  height: 28px;
+}
+
+.Strength__valueContainer .Strength__barsContainer .Strength__bar {
+  background-color: var(--barFillColor);
+  border-color: var(--barBorderColor);
+}
+
+.Strength__valueContainer[data-strength="tooweak"]
+  .Strength__barsContainer
+  .Strength__bar:first-of-type {
+  --barFillColor: var(--color-red-500);
+  --barBorderColor: var(--color-red-500);
+}
+
+.Strength__valueContainer[data-strength="weak"]
+  .Strength__barsContainer
+  .Strength__bar:nth-child(1),
+.Strength__valueContainer[data-strength="weak"]
+  .Strength__barsContainer
+  .Strength__bar:nth-child(2) {
+  --barFillColor: var(--color-orange-400);
+  --barBorderColor: var(--color-orange-400);
+}
+
+.Strength__valueContainer[data-strength="medium"]
+  .Strength__barsContainer
+  :not(.Strength__bar:last-of-type) {
+  --barFillColor: var(--color-yellow-300);
+  --barBorderColor: var(--color-yellow-300);
+}
+
+.Strength__valueContainer[data-strength="strong"]
+  .Strength__barsContainer
+  .Strength__bar {
+  --barFillColor: var(--color-green-200);
+  --barBorderColor: var(--color-green-200);
+}
+
+.Strength__valueText span {
+  display: none;
+  text-transform: uppercase;
+  color: var(--color-grey-200);
+  font: var(--fontPreset3);
+}
+
+.Strength__valueContainer[data-strength="tooweak"]
+  .Strength__valueText
+  .StrengthValueText--tooWeak {
+  display: block;
+}
+
+.Strength__valueContainer[data-strength="weak"]
+  .Strength__valueText
+  .StrengthValueText--weak {
+  display: block;
+}
+
+.Strength__valueContainer[data-strength="medium"]
+  .Strength__valueText
+  .StrengthValueText--medium {
+  display: block;
+}
+
+.Strength__valueContainer[data-strength="strong"]
+  .Strength__valueText
+  .StrengthValueText--strong {
+  display: block;
+}
