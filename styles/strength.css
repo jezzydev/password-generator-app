@@ -115,6 +115,10 @@
 }
 
 @media (min-width: 600px) {
+  .Strength__content {
+    padding: 24px 32px;
+  }
+
   .Strength__text {
     font: var(--fontPreset3);
   }
