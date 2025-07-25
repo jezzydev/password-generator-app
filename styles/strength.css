@@ -113,3 +113,13 @@
   .StrengthValueText--strong {
   display: block;
 }
+
+@media (min-width: 600px) {
+  .Strength__text {
+    font: var(--fontPreset3);
+  }
+
+  .Strength__valueText span {
+    font: var(--fontPreset2);
+  }
+}

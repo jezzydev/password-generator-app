@@ -1,17 +1,16 @@
 /* generate button */
 .Generate__button {
   width: 100%;
-  padding: 16px 104px;
+  height: 56px;
   background-color: var(--color-green-200);
   color: var(--color-grey-800);
-  font: var(--fontPreset4);
-  text-transform: uppercase;
   border: 2px solid var(--color-green-200);
   outline: none;
 }
 
 .Generate__buttonContent {
-  display: inline-flex;
+  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
@@ -24,7 +23,22 @@
   color: var(--color-green-200);
 }
 
+.Generate__text {
+  font: var(--fontPreset4);
+  text-transform: uppercase;
+  position: relative;
+  top: 1px;
+}
+
+.Generate__iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .Generate__iconWrapper svg {
+  width: 12px;
+  height: 12px;
   fill: var(--color-grey-800);
 }
 
@@ -32,4 +46,14 @@
 .Generate__button:active .Generate__iconWrapper svg,
 .Generate__button:focus .Generate__iconWrapper svg {
   fill: var(--color-green-200);
+}
+
+@media (min-width: 600px) {
+  .Generate__button {
+    height: 65px;
+  }
+
+  .Generate__text {
+    font: var(--fontPreset3);
+  }
 }

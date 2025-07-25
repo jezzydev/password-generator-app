@@ -8,6 +8,27 @@ const includeSymbols = document.querySelector('#chk-include-symbols');
 const generateBtn = document.querySelector('.Generate__button');
 const passwordValue = document.querySelector('.Password__value');
 const strengthValue = document.querySelector('.Strength__valueContainer');
+const copyBtn = document.querySelector('.Copy__button');
+const copiedText = document.querySelector('.Copied__text');
+
+/* copy */
+copyBtn.addEventListener('click', function () {
+
+    if (passwordValue.textContent?.length > 0) {
+        navigator.clipboard.writeText(passwordValue.textContent)
+            .then(() => {
+                copiedText.style.visibility = 'visible';
+            })
+            .catch(err => {
+                alert(`Failed to copy text: ${err}`);
+            });
+    }
+});
+
+function hideCopiedText() {
+    copiedText.style.visibility = 'hidden';
+}
+
 
 /* char length */
 updateCharLength(slider.value);
@@ -30,6 +51,9 @@ function updateSliderProgress(value) {
 
 /* generate password */
 generateBtn.addEventListener('click', function () {
+
+    hideCopiedText();
+
     const length = slider.value;
     const settings = getPasswordSettings();
     const password = generatePassword(length, settings.characterPool);

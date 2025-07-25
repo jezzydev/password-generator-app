@@ -81,3 +81,13 @@
   background-color: var(--color-grey-850);
   width: 100%;
 }
+
+@media (min-width: 600px) {
+  .CharacterSettings__text {
+    font: var(--fontPreset3);
+  }
+
+  .CharacterSettings__length {
+    font: var(--fontPreset1);
+  }
+}

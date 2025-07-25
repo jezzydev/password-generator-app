@@ -68,14 +68,9 @@ body {
 .PasswordGenContainer {
   max-width: 540px;
   width: 100%;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 16px;
-}
-
-.PasswordGenHeader,
-.PasswordGenBody {
-  min-width: 343px;
-  width: 100%;
 }
 
 .PasswordGenHeader__title {
@@ -86,6 +81,7 @@ body {
 
 .PasswordGenBody {
   display: grid;
+  grid-template-rows: repeat(2, auto);
   gap: 16px;
 }
 
@@ -96,8 +92,8 @@ body {
 }
 
 .PasswordGenBody__settingsContainer {
-  width: 100%;
   display: grid;
   grid-template-rows: repeat(3, auto);
+
   gap: 32px;
 }
