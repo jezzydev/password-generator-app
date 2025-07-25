@@ -56,7 +56,7 @@ button {
 
 body {
   margin: 0;
-  background-color: var(--color-grey-950);
+  background: var(--gradient-1);
   color: var(--color-white);
   min-height: 100vh;
   display: flex;
